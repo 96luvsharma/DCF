@@ -10,9 +10,10 @@ def get_sp500():
     url = "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
 
     # Define headers to mimic a web browser
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
-    }
+    session = requests.Session()
+    session.headers.update({
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36'
+    })
 
     # Fetch the content of the URL with headers
     response = requests.get(url, headers=headers)
