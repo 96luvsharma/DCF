@@ -16,8 +16,7 @@ def get_sp500():
     "Accept-Encoding": "gzip, deflate, br",
     "Connection": "keep-alive",
     "Referer": "https://www.google.com/",
-    "Upgrade-Insecure-Requests": "1",
-}
+    "Upgrade-Insecure-Requests": "1"}
     # Define headers to mimic a web browser
     # session = requests.Session()
     # session.headers.update({
