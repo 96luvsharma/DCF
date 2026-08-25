@@ -73,7 +73,7 @@ if st.session_state.clicked:
 
         Company_Data = {
             "Company": [company_name], "Current Price": [f"${current_price:,.2f}"],
-            "Shares Outstanding": [f"${shares_outstanding:,.2f}"], "Beta": [f"{beta*100:.2f}"],
+            "Shares Outstanding": [f"${shares_outstanding:,.2f}"], "Beta": [f"{beta:.2f}"],
             "Market Cap": [f"${market_cap:,.2f}"], "Total Debt": [f"${total_debt:,.2f}"],
             "Total Cash": [f"${total_cash:,.2f}"]
         }
