@@ -44,7 +44,7 @@ if 'clicked' not in st.session_state:
 def click_button():
     st.session_state.clicked = True
 
-st.button('Get Info', on_click=click_button)
+st.button('Calculate DCF', on_click=click_button)
 
 if st.session_state.clicked:
 
