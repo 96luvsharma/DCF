@@ -195,7 +195,7 @@ if st.session_state.clicked:
         with col_4:
             st.dataframe(projection_df, hide_index= True)    
 
-        price_adjusted_for_splits = xr.get_unsplitted_value(TICKER)
+        price_adjusted_for_splits = current_price
         final_fcf = fcfs[-1]
         terminal_value = (final_fcf * (1 + terminal_growth_rate)) / (wacc - terminal_growth_rate)
         pv_terminal_value = terminal_value / (1 + wacc) ** Years
@@ -208,7 +208,6 @@ if st.session_state.clicked:
         verdict = "UNDERVALUED" if upside > 0 else "OVERVALUED"     
 
         final_outcome = {"Company": f"{company_name}", "Current_Price": f"${current_price:,.2f}",
-                 "Price Adjusted For Splits": f"${price_adjusted_for_splits:,.2f}",
                  "Fair Value per Share": f"${fair_value_per_share:,.2f}",
                  "Implied Upside/Downside": f"{upside * 100:.2f}% ({verdict})"}
 
